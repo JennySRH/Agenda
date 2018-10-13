@@ -1,6 +1,5 @@
 #include "User.hpp"
 
-
 User::User(string name,string password,string email,string phone) {
 	this->name = name;
 	this->password = password;
@@ -39,3 +38,18 @@ string User::getPhone() {
 void User::setPhone(string phone) {
 	this->phone = phone;
 }
+
+/*
+
+list<Meeting> User::getAllMeetings() {
+	list<Meeting> meetings;
+}
+
+list<Meeting> User::getAllSponsorMeetings(){
+
+}
+
+list<Meeting> User::getAllParticipateMeetings() {
+
+}
+*/

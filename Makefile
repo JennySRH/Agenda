@@ -4,7 +4,7 @@ FLAGS := -std=c++11 -w
 main: User.o Date.o Meeting.o main.o
 	$(CC) $(FLAGS) Date.o Meeting.o main.o -o $@
 
-User.o: User.hpp User.cpp
+User.o: User.hpp User.cpp Meeting.hpp Meeting.cpp
 	$(CC) $(FLAGS) -c User.cpp
 
 Date.o: Date.hpp Date.cpp

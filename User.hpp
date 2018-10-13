@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <list>
+#include "Meeting.hpp"
 using namespace std;
 
 class User{
@@ -18,4 +20,8 @@ public:
 	void setEmail(string email);
 	string getPhone();
 	void setPhone(string phone);
+//	list<Meeting> getAllMeetings();
+//	list<Meeting> getAllSponsorMeetings();
+//	list<Meeting> getAllParticipateMeetings();
+
 };
