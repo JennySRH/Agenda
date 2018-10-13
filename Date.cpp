@@ -80,10 +80,10 @@ bool Date::checkDate(string date) {
 			}
 			break;
 		case 2:
-			if( day_t != 29 && year_t%400 == 0 ) {
+			if( day_t > 29 && year_t%400 == 0 ) {
 				return false;
 			}
-			else if(day_t != 28){
+			else if(day_t > 28){
 				return false;
 			}
 			break;
