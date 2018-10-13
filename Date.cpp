@@ -1,10 +1,15 @@
 #include "Date.hpp"
 
-Date::Date(){}
+Date::Date(){
+	setDate("0000-00-00/00:00");
+}
 
 Date::Date(string date) {	
 	if(checkDate(date)){
 		setDate(date);
+	}
+	else {
+		setDate("0000-00-00/00:00");
 	}
 }
 
