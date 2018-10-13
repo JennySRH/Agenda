@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <sstream>
+
 class Date{
 private:
 	int year;
