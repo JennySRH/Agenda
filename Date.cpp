@@ -3,12 +3,20 @@
 Date::Date(){}
 
 Date::Date(string date) {	
-	if(checkDate(data)){
-
+	if(checkDate(date)){
+		setDate(date);
 	}
 }
 
-bool checkDate(string date) {
+void Date::setDate(string date) {
+	year = date.substr(0,4);
+	month = date.substr(5,2);
+	day = date.substr(8,2);
+	hour = date.substr(11,2);
+	minute = date.substr(14,2)
+}
+
+bool Date::checkDate(string date) {
 	if(date.length() != 16) {
 		return false;
 	}
@@ -85,4 +93,30 @@ bool checkDate(string date) {
 			}
 			break;
 	}
+	if(hour_t > 23 || hour_t < 0) {
+		return false;
+	}
+	if(minute_t > 59 || minute_t < 0) {
+		return false;
+	}
+	return true;
+}
+
+Date Date::stringToDate(string date){
+	Date temp(date);
+	return temp;
+}
+
+string Date::dateToString(){
+	string date = "";
+	date += year;
+	date += "-";
+	date += month;
+	date += "-";
+	date += day;
+	date += "/";
+	date += hour;
+	date += ":";
+	date += minute;
+	return date;
 }
