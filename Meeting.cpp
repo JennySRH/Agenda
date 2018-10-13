@@ -9,7 +9,7 @@
 
 Meeting::Meeting() {}
 
-Meeting::Meeting(string sponsor,vector<string> participator,Data startDate,data endDate,string title){
+Meeting::Meeting(string sponsor,vector<string> participator,Date startDate,Date endDate,string title){
 	this->sponsor = sponsor;
 	this->participator = participator;
 	this->startDate = startDate;
@@ -53,6 +53,6 @@ string Meeting::getTitle() {
 	return title;
 }
 	
-void setTitle(string title) {
+void Meeting::setTitle(string title) {
 	this->title = title;
 }

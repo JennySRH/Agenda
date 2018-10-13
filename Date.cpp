@@ -13,7 +13,7 @@ void Date::setDate(string date) {
 	month = date.substr(5,2);
 	day = date.substr(8,2);
 	hour = date.substr(11,2);
-	minute = date.substr(14,2)
+	minute = date.substr(14,2);
 }
 
 bool Date::checkDate(string date) {
@@ -50,7 +50,7 @@ bool Date::checkDate(string date) {
 	string month_temp = date.substr(5,2);
 	string day_temp = date.substr(8,2);
 	string hour_temp = date.substr(11,2);
-	string minute_temp = date.substr(14,2)
+	string minute_temp = date.substr(14,2);
 	stringstream ss;
 	ss << year_temp;
 	ss >> year_t;
@@ -74,16 +74,16 @@ bool Date::checkDate(string date) {
 		return false;
 	}
 	switch(month_t){
-		case 1,3,5,7,8,10,12: 
+		case 1: case 3: case 5: case 7: case 10: case 12: 
 			if(day_t > 31 || day_t < 1) {
 				return false;
 			}
 			break;
 		case 2:
-			if( data_t != 29 && year_t%400 == 0 ) {
-				return false
+			if( day_t != 29 && year_t%400 == 0 ) {
+				return false;
 			}
-			else if(data_t != 28){
+			else if(day_t != 28){
 				return false;
 			}
 			break;
@@ -120,3 +120,10 @@ string Date::dateToString(){
 	date += minute;
 	return date;
 }
+
+Date & Date::operator=(Date other) {
+	string date = other.dateToString();
+	setDate(date);
+	return *this;
+}
+

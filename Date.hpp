@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <sstream>
+using namespace std;
 
 class Date{
 private:
@@ -16,4 +17,5 @@ public:
 	void setDate(string date);
 	Date stringToDate(string date);
 	string dateToString();
-}
+	Date & operator=(Date other);
+};

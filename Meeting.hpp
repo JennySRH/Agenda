@@ -32,7 +32,7 @@ private:
 	string title;
 public:
 	Meeting();
-	Meeting(string sponsor,vector<string> participator,Data startDate,data endDate,string title);
+	Meeting(string sponsor,vector<string> participator,Date startDate,Date endDate,string title);
 	string getSponsor();
 	void setSponsor(string sponsor);
 	vector<string> getParticipator();
@@ -43,4 +43,4 @@ public:
 	void setEndDate(Date endDate);
 	string getTitle();
 	void setTitle(string title);
-}
+};
